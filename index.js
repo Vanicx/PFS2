@@ -16,9 +16,6 @@ client.commands = new discord.Collection();
 
 client.login(botConfig.token);
 
-bot.login(process.env.token);
-
-bot.login(botConfig.token);
 
 
 //  Command handler
@@ -131,3 +128,5 @@ client.on("messageDelete", messageDeleted => {
     client.channels.cache.find(c => c.name == "log").send(embed);
 
 });
+
+bot.login(process.env.token);
